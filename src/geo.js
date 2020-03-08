@@ -1,13 +1,9 @@
-var longitude;
-var latitude;
-
 function getCoords() {
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition( function(position) {
             sessionStorage.lat = position.coords.latitude;
             sessionStorage.long = position.coords.longitude;
-        }.bind(this));
-        
+        });    
     } else {
         console.error("Geolocation is not supported by this browser!");
     }
