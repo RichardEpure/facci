@@ -1,6 +1,8 @@
 import React from 'react';
 import './styles/css/app.css';
-import geo from './geo';
+
+// test imports
+import Home from "./Home";
 
 class App extends React.Component{
   componentDidMount(){
@@ -10,8 +12,7 @@ class App extends React.Component{
   render(){
     return(
       <div className="App">
-        <header className="App-header">
-        </header>
+        <Home></Home>
       </div>
     );
   }

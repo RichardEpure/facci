@@ -9,7 +9,7 @@ function getCoords() {
     }
 }
 
-async function getLocation(){
+export async function getLocation() {
     if (sessionStorage.lat == null || sessionStorage.long == null){
         getCoords();
     }
@@ -31,8 +31,6 @@ async function getLocation(){
 
     return resp;
 }
-
-console.log(getLocation());
 
 //     'apikey': 'Gp4J7-0f8fxKmy6r-eyIZVMfyEHirnnR2JOoGR1SC90'
 
