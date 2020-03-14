@@ -1,7 +1,7 @@
 import React from 'react';
 
-// test imports
 import Location from "./Location";
+import Wind from "./Wind";
 
 class Home extends React.Component{
   componentDidMount(){
@@ -12,6 +12,7 @@ class Home extends React.Component{
     return(
       <div className="Home">
         <Location></Location>
+        <Wind></Wind>
       </div>
     );
   }
