@@ -1,4 +1,4 @@
-function getCoords() {
+export function getCoords() {
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition( function(position) {
             sessionStorage.lat = position.coords.latitude;
@@ -26,6 +26,7 @@ export async function getLocation() {
     })
 
     .catch(function(error) {
+        console.log("failed to retrieve location data");
         return null;
     });
 
