@@ -2,27 +2,27 @@
 {
     position: absolute;
     top: 50px;
-    left: 50px;
-}
+    left: 20px;
 
-%windText
-{
-    color: rgb(112, 112, 112);
-    font-weight: normal;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-h1
-{
-    @extend %windText;
-    font-size: 30px;
-    line-height: 2rem;
-}
-
-h2
-{
-    @extend %windText;
-    font-size: 18px;
+    %windText
+    {
+        color: rgb(112, 112, 112);
+        font-weight: normal;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1
+    {
+        @extend %windText;
+        font-size: 20px;
+        line-height: 2rem;
+    }
+    
+    h2
+    {
+        @extend %windText;
+        font-size: 14px;
+    }
 }

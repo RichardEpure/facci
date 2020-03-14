@@ -2,27 +2,27 @@
 {
     position: absolute;
     top: 50px;
-    right: 50px;
-}
+    right: 20px;
 
-%locationText
-{
-    color: rgb(112, 112, 112);
-    font-weight: normal;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-h1
-{
-    @extend %locationText;
-    font-size: 30px;
-    line-height: 2rem;
-}
-
-h2
-{
-    @extend %locationText;
-    font-size: 18px;
+    %locationText
+    {
+        color: rgb(112, 112, 112);
+        font-weight: normal;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1
+    {
+        @extend %locationText;
+        font-size: 20px;
+        line-height: 2rem;
+    }
+    
+    h2
+    {
+        @extend %locationText;
+        font-size: 14px;
+    }
 }
