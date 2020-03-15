@@ -1,0 +1,38 @@
+.daylist-container {
+    ul {
+        text-align: center;
+        list-style: none;
+        padding:0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            width: 20%;
+            max-width: 100px;
+            text-align: center;
+            color: rgb(73, 73, 73);
+
+            h3 {
+                font-size: 14px;
+                margin: 0;
+            }
+
+            button {
+                cursor: pointer;
+                color: inherit;
+                border: none;
+                background: none;
+                padding: 6px;
+                margin: 4px;
+                font-size: 18px;
+                outline: none;
+            }
+
+            .select-day
+            {
+                border-radius: 10px;
+                background-color: rgb(83, 214, 103);
+            }
+        }
+    }
+}
