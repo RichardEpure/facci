@@ -80,7 +80,8 @@ class Month extends Component {
                 {/* <h1 > {this.state.days} </h1> */}
                 <Week numberOfDays = {this.state.numberOfDays} 
                 month = {this.state.month}
-                monthNumber = {this.state.monthNumber}/>
+                monthNumber = {this.state.monthNumber}
+                today = {new Date()}/>
             </div>
          );
     }

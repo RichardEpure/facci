@@ -1,6 +1,20 @@
 .calendarContainer{
-    margin: 40vh;
+    position: absolute;
+    left: 35vw;
+    top: 30vh;
     width: 600px;
     height: 400px;
     border: 2px solid green;
+}
+
+.monthName{
+    text-align: center;
+}
+
+.dayHeadings{
+    display: flex;
+}
+
+.day{
+    padding: 20px;
 }

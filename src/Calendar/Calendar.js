@@ -12,7 +12,7 @@ class Calendar extends Component {
         return (
             <div className="calendarContainer"> 
             <Month></Month>
-            <Week></Week>
+            
             </div>
 
          );
