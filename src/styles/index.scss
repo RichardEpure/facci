@@ -23,7 +23,10 @@ code {
 // Home
 .simple-data-container {
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
+  max-width: 800px;
   min-height: 200px;
   height: 20vh;
 }

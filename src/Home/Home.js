@@ -3,7 +3,7 @@ import React from 'react';
 import Location from "./Location";
 import Wind from "./Wind";
 import Temperature from './Temperature';
-import WeatherCards from "./WeatherCards";
+import DayList from "./DayList";
 
 class Home extends React.Component{
   componentDidMount() {
@@ -18,7 +18,7 @@ class Home extends React.Component{
           <Wind></Wind>
           <Temperature></Temperature>
         </div>
-        <WeatherCards></WeatherCards>
+        <DayList></DayList>
       </div>
     );
   }
