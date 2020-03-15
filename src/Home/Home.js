@@ -3,18 +3,22 @@ import React from 'react';
 import Location from "./Location";
 import Wind from "./Wind";
 import Temperature from './Temperature';
+import WeatherCards from "./WeatherCards";
 
 class Home extends React.Component{
-  componentDidMount(){
+  componentDidMount() {
    
   }
 
   render(){
     return(
       <div className="Home">
-        <Location></Location>
-        <Wind></Wind>
-        <Temperature></Temperature>
+        <div className="simple-data-container">
+          <Location></Location>
+          <Wind></Wind>
+          <Temperature></Temperature>
+        </div>
+        <WeatherCards></WeatherCards>
       </div>
     );
   }
