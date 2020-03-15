@@ -8,9 +8,10 @@ export async function getWeather() {
     .then((data) => {
         return {
             "temp": Math.round(data.main.temp - 273.15),
-            "description": data.weather[0].description,
+            "description": data.weather[0].main,
             "humidity": data.main.humidity,
             "windSpeed": data.wind.speed,
+            "pressure": data.main.pressure,
         }
 
     })
