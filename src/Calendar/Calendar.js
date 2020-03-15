@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Month from './Month';
-import './calendar.css'
+import "./css/calendar.css"
 
 class Calendar extends Component {
     state = {  }

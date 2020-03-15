@@ -90,7 +90,7 @@ const WEEK_LENGTH = 7;
 
 function getWeeksForMonth(month,year){
     const firstOfMonth = new Date(year, month, 1);
-    const firstDayofWeek = firstOfMonth.getDay() + 6;
+    const firstDayofWeek = firstOfMonth.getDay();
     const weeks = [[]];
 
     console.log("first day of week " + firstOfMonth.getDay());
