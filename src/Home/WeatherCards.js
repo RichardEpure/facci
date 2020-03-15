@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/css/weatherCards.css";
-import { getWeather, getForecast } from "../Api/weather";
+import { getForecast } from "../Api/weather";
 
 class WeatherCards extends React.Component {
 
