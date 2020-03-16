@@ -4,6 +4,8 @@ import WeatherCards from "./WeatherCards";
 import { getForecast } from "../Api/weather";
 
 class HourList extends React.Component {
+    _isMounted = false;
+
     constructor(props)
     {
         super(props);
@@ -15,6 +17,8 @@ class HourList extends React.Component {
 
     componentDidMount()
     {
+        this._isMounted = true;
+
         getForecast()
         .then(data => {
             const selectDayData = data[this.props.selectDay];
@@ -23,14 +27,22 @@ class HourList extends React.Component {
                 hours.push(selectDayData[i].hours);
             }
 
-            this.setState(() => {
-                return {
-                    selectHour: selectDayData[0].hours,
-                    hours: hours,
-                }
-            });
+            if(this._isMounted)
+            {
+                this.setState(() => {
+                    return {
+                        selectHour: selectDayData[0].hours,
+                        hours: hours,
+                    }
+                });
+            }
         })
         .catch(error => console.trace(error))
+    }
+
+    componentWillUnmount()
+    {
+        this._isMounted = false;
     }
 
     displayHours()
@@ -43,7 +55,6 @@ class HourList extends React.Component {
                 index = i;
             }
         }
-
         elements[0] = <li key={0}></li>
         elements[2] = <li key={2}></li>
         if(this.state.hours[index-1] !== undefined)

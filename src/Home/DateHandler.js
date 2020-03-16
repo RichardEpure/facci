@@ -1,3 +1,11 @@
+let initDate = new Date();
+
+if(initDate.getHours() > 21)
+{
+    initDate = new Date(initDate);
+    initDate.setDate(initDate.getDate()+1);
+}
+
 class DateHandler {
     static days = {
         0: "Sun",
@@ -8,12 +16,13 @@ class DateHandler {
         5: "Fri",
         6: "Sat",
     }
-    static numDays = 5;
-    static date = new Date();
+    static numDays;
+
+    static date = initDate;
 
     static getDateList(numberOfDates) {
         let list = [this.date]
-        let nextDate = new Date();
+        let nextDate = new Date(this.date);
 
         for(let i=0; i<numberOfDates; i++)
         {

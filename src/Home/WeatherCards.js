@@ -4,6 +4,8 @@ import { getForecast } from "../Api/weather";
 
 class WeatherCards extends React.Component {
 
+    _isMounted = false;
+
     constructor(props)
     {
         super(props);
@@ -17,6 +19,8 @@ class WeatherCards extends React.Component {
 
     updateStats()
     {
+        this._isMounted = true;
+
         getForecast()
         .then(data => {
             const selectDayData = data[this.props.selectDay];
@@ -30,14 +34,17 @@ class WeatherCards extends React.Component {
                 }
             }
             const selectHourData = selectDayData[index];
-            this.setState(() => {
-                return {
-                    temp: selectHourData.temp,
-                    tempDesc: selectHourData.description,
-                    pressure: selectHourData.pressure,
-                    humidity: selectHourData.humidity,
-                }
-            });
+            if(this._isMounted)
+            {
+                this.setState(() => {
+                    return {
+                        temp: selectHourData.temp,
+                        tempDesc: selectHourData.description,
+                        pressure: selectHourData.pressure,
+                        humidity: selectHourData.humidity,
+                    }
+                });
+            }   
         })
         .catch(error => console.trace(error))
     }
@@ -45,6 +52,11 @@ class WeatherCards extends React.Component {
     componentDidMount()
     {
         this.updateStats();
+    }
+
+    componentWillUnmount()
+    {
+        this._isMounted = false;
     }
 
     render() {

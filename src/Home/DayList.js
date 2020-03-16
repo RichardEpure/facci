@@ -2,6 +2,7 @@ import React from 'react';
 import "../styles/css/daylist.css"
 import DateHandler from "./DateHandler";
 import HourList from "./HourList";
+import { getForecast } from "../Api/weather";
 
 class DayList extends React.Component {
     constructor(props)
@@ -9,23 +10,24 @@ class DayList extends React.Component {
         super(props);
         this.state = {
             selectDay: DateHandler.date.getDay(),
+            elements: []
         }
     }
 
-    updateList()
+    updateList(selectDay)
     {
         let elements = []
         const dates = DateHandler.getDateList(DateHandler.numDays);
 
         for(let i=0; i<DateHandler.numDays; i++) {
             let button = <button>{dates[i].getDate()}</button>;
-            if(i === this.state.selectDay)
+            if(i === selectDay)
             {
                 button = <button className="select-day">{dates[i].getDate()}</button>
             }
             else
             {
-                button = <button onClick={() => this.setState(() => { return{selectDay: i} })}>{dates[i].getDate()}</button>
+                button = <button onClick={() => this.updateList(i)}>{dates[i].getDate()}</button>
             }
 
             elements.push(
@@ -36,12 +38,24 @@ class DayList extends React.Component {
             );
         }
 
-        return elements;
+        this.setState(() => {
+            return {
+                selectDay: selectDay,
+                elements: elements,
+            }
+        });
     }
 
     componentDidMount()
     {
-        this.updateList();
+        getForecast()
+        .then(data => {
+            DateHandler.numDays = data.length;
+        })
+        .then(() => {
+            this.updateList(0);
+        })
+        .catch(error => console.trace(error))
     }
 
     render() {
@@ -49,7 +63,7 @@ class DayList extends React.Component {
             <div>
                 <div className="daylist-container">
                     <ul>
-                        {this.updateList()}
+                        {this.state.elements}
                     </ul>
                 </div>
                 <HourList key={this.state.selectDay} selectDay={this.state.selectDay}></HourList>
