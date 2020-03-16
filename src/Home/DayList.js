@@ -5,6 +5,9 @@ import HourList from "./HourList";
 import { getForecast } from "../Api/weather";
 
 class DayList extends React.Component {
+
+    _isMounted = false;
+
     constructor(props)
     {
         super(props);
@@ -38,16 +41,20 @@ class DayList extends React.Component {
             );
         }
 
-        this.setState(() => {
-            return {
-                selectDay: selectDay,
-                elements: elements,
-            }
-        });
+        if(this._isMounted)
+        {
+            this.setState(() => {
+                return {
+                    selectDay: selectDay,
+                    elements: elements,
+                }
+            });
+        }
     }
 
     componentDidMount()
     {
+        this._isMounted = true;
         getForecast()
         .then(data => {
             DateHandler.numDays = data.length;
@@ -56,6 +63,11 @@ class DayList extends React.Component {
             this.updateList(0);
         })
         .catch(error => console.trace(error))
+    }
+
+    componentWillUnmount()
+    {
+        this._isMounted = false;
     }
 
     render() {

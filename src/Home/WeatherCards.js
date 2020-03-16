@@ -19,8 +19,6 @@ class WeatherCards extends React.Component {
 
     updateStats()
     {
-        this._isMounted = true;
-
         getForecast()
         .then(data => {
             const selectDayData = data[this.props.selectDay];
@@ -51,6 +49,7 @@ class WeatherCards extends React.Component {
 
     componentDidMount()
     {
+        this._isMounted = true;
         this.updateStats();
     }
 
