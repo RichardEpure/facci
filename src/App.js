@@ -13,8 +13,8 @@ class App extends React.Component{
   render(){
     return(
       <div className="App">
-        <Home></Home>
-        {/* <Calendar></Calendar> */}
+        {/* <Home></Home> */}
+        <Calendar></Calendar>
       </div>
     );
   }

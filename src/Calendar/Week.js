@@ -18,18 +18,18 @@ class Week extends React.Component {
         const today = new Date()
         const month = today.getMonth()
         const year = today.getFullYear()
-        const startOfMonth = new Date(year, 3, 1)
-        const lastOfMonth = new Date(year, 3, 30)
+        const startOfMonth = new Date(year, month, 1)
+        const lastOfMonth = new Date(year, month, 30)
         const monthStartedOn = startOfMonth.getDay()
 
         const days = [
             "Sunday",
-            "Monday",
+            "Monday",  
             "Tuesday",
             "Wednesday",
             "Thursday",
             "Friday",
-            "Saturday"
+            "Saturday" 
         ]
     
         this.setState((state, props) => {
@@ -66,14 +66,13 @@ class Week extends React.Component {
             }
         }
     
-        var numberOfWeeks = 1;
-        
+        var numOfWeeks = 1;
 
         for (let i = 1; i <= lastOfMonth.getDate(); i++){
             console.log("day " + i + " is " + startDay)
             if (startDay == dayNames[6]){
                 startDay = dayNames[0]
-                numberOfWeeks += 1
+                numOfWeeks += 1
             }
             else{
                 startDay = dayNames[dayIndex + 1]
@@ -88,11 +87,26 @@ class Week extends React.Component {
         
         this.setState((state, props) => {
             return {
-                numberOfWeeks: 6,
+                numberOfWeeks: numOfWeeks,
                 dayNames: dayNames
             };
         });
         
+    }
+
+    printWeek(){
+
+        var weeks = 6;
+        var rows = [];
+
+        for (let i = 0; i < weeks; i++){
+            rows[i] = <li> {weeks}</li>
+        }
+
+
+        
+
+        return rows;
     }
 
     componentDidMount()
@@ -132,7 +146,7 @@ class Week extends React.Component {
                     </h3>
                 </div>
                 <div className="weeks">
-
+                    {this.printWeek()}
                 </div>
             </div> );
     }
