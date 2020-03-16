@@ -1,18 +1,17 @@
 import React from 'react';
 import './styles/css/app.css';
-
-// test imports
-import Home from "./Home/Home";
+import Nav from "./Nav";
 
 class App extends React.Component{
-	componentDidMount(){
+
+	componentDidMount() {
 
 	}
 
-	render(){
+	render() {
 		return(
 			<div className="App">
-				<Home></Home>
+				<Nav></Nav>
 			</div>
 		);
 	}
