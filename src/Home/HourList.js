@@ -2,6 +2,9 @@ import React from 'react';
 import "../styles/css/hourlist.css";
 import WeatherCards from "./WeatherCards";
 import { getForecast } from "../Api/weather";
+import { ChevronRight as RightIcon, ChevronLeft as LeftIcon } from "react-feather";
+
+const iconSize = 20;
 
 class HourList extends React.Component {
     _isMounted = false;
@@ -77,7 +80,9 @@ class HourList extends React.Component {
                 <WeatherCards key={this.props.selectDay+this.state.selectHour} selectDay={this.props.selectDay} selectHour={this.state.selectHour}></WeatherCards>
                 <div className="hourlist-container">
                     <ul>
+                        <i><LeftIcon size={iconSize}></LeftIcon></i>
                         {this.displayHours()}
+                        <i><RightIcon size={iconSize}></RightIcon></i>
                     </ul>
                 </div>
             </div>
