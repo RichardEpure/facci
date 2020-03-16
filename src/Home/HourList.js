@@ -4,7 +4,7 @@ import WeatherCards from "./WeatherCards";
 import { getForecast } from "../Api/weather";
 import { ChevronRight as RightIcon, ChevronLeft as LeftIcon } from "react-feather";
 
-const iconSize = 20;
+const iconSize = 19;
 
 class HourList extends React.Component {
     _isMounted = false;
