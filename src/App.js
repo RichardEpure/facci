@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/css/app.css';
-import Calendar from './Calendar/Calendar'
+import DatePicker from './Calendar/DatePicker'
 
 // test imports
 import Home from "./Home/Home";
@@ -13,8 +13,8 @@ class App extends React.Component{
   render(){
     return(
       <div className="App">
-        {/* <Home></Home> */}
-        <Calendar></Calendar>
+        <Home></Home>
+        <DatePicker></DatePicker>
       </div>
     );
   }

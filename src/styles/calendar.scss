@@ -1,20 +1,80 @@
-.calendarContainer{
-    position: absolute;
-    left: 35vw;
-    top: 30vh;
-    width: 600px;
-    height: 400px;
-    border: 2px solid green;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+.react-calendar{
+    margin: 15px auto 15px auto;
+    width: 500px;
+    height: auto;
+    font-family: 'Ubuntu';
+
+    button{
+        background: transparent;
+        box-shadow: 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        text-shadow: 0px 0px 0px transparent;
+        font-family: 'Ubuntu';
+    }
+
+}
+/* main header*/
+.react-calendar__navigation{
+    margin-left: 33%;
+    margin-bottom: 10px;
 }
 
-.monthName{
+.react-calendar__navigation__label{
+    font-size: 20pt;
+    font-weight: 600;
+    flex-grow: 0 !important;
+    pointer-events: none;
+}
+
+.react-calendar__viewContainer{
     text-align: center;
+    text-decoration: none;
 }
 
-.dayHeadings{
-    display: flex;
+.react-calendar__month-view__weekdays{
+    margin-top: 30px;
+    font-size: 15pt;
 }
 
-.day{
-    padding: 20px;
+.react-calendar__navigation__next-button{
+    font-size: 25pt;
+}
+
+.react-calendar__navigation__next2-button{
+    display: none;
+}
+
+.react-calendar__navigation__prev-button{
+    font-size: 25pt;
+}
+
+.react-calendar__navigation__prev2-button{
+    display: none;
+}
+
+abbr{
+    text-decoration: none;
+}
+
+/* dates */
+.react-calendar__month-view__days__day {
+    margin-top: 30px;
+ 
+
+    &:active {
+        background-color: green;
+    }
+
+    &:focus {
+        background-color: green;
+        border: 1px solid green;
+    }
+}
+
+//days not in this month
+.react-calendar__month-view__days__day--neighboringMonth{
+    color: transparent;
+    pointer-events: none;
 }
