@@ -40,7 +40,7 @@ class Nav extends React.Component {
             };
 
             elements.push(
-            <li key={key} onClick={onClickHandler}>{icons[page]}</li>
+                <li key={key} onClick={onClickHandler}>{icons[page]}</li>
             );
             key++;
         }
