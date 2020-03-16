@@ -1,6 +1,9 @@
 import React from 'react';
 import "../styles/css/weatherCards.css";
 import { getForecast } from "../Api/weather";
+import { BarChart as PressureIcon, CloudDrizzle as HumidityIcon, Thermometer as TempIcon } from "react-feather";
+
+const iconSize = 25;
 
 class WeatherCards extends React.Component {
 
@@ -64,17 +67,17 @@ class WeatherCards extends React.Component {
                 <div className="weather-cards-container">
                     <ul>
                         <li>
-                            <i></i>
+                            <i><TempIcon size={iconSize}></TempIcon></i>
                             <p>{this.state.temp}°C</p>
                             <span>{this.state.tempDesc}</span>
                         </li>
                         <li>
-                            <i></i>
+                            <i><HumidityIcon size={iconSize}></HumidityIcon></i>
                             <p>{this.state.humidity}%</p>
                             <span>Humidity</span>
                         </li>
                         <li>
-                            <i></i>
+                            <i><PressureIcon size={iconSize}></PressureIcon></i>
                             <p>{this.state.pressure}Pa</p>
                             <span>Pressure</span>
                         </li>
