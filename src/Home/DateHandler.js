@@ -1,6 +1,6 @@
 let initDate = new Date();
 
-if(initDate.getHours() > 21)
+if(initDate.getHours() >= 21)
 {
     initDate = new Date(initDate);
     initDate.setDate(initDate.getDate()+1);
