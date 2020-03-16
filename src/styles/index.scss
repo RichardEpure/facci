@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background: linear-gradient(
     to bottom, 
     #f1f1f1,
@@ -29,4 +30,5 @@ code {
   max-width: 800px;
   min-height: 200px;
   height: 20vh;
+  margin-bottom: 60px;
 }
