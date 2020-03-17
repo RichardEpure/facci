@@ -1,0 +1,23 @@
+.wind-container {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
+.wind-container h1, .wind-container h2 {
+  color: #707070;
+  font-weight: normal;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.wind-container h1 {
+  font-size: 20px;
+  line-height: 2rem;
+}
+
+.wind-container h2 {
+  font-size: 14px;
+}
+/*# sourceMappingURL=wind.css.map */

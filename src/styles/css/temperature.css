@@ -1,0 +1,25 @@
+.temperature-container {
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.temperature-container h1 {
+  font-size: 30px;
+  line-height: 2rem;
+  color: #707070;
+  font-weight: normal;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.temperature-container h1 span {
+  color: #494949;
+  font-size: 48px;
+  position: relative;
+  top: 10px;
+}
+/*# sourceMappingURL=temperature.css.map */

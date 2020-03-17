@@ -1,0 +1,36 @@
+.daylist-container ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.daylist-container ul li {
+  display: inline-block;
+  width: 20%;
+  max-width: 100px;
+  text-align: center;
+  color: #494949;
+}
+
+.daylist-container ul li h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.daylist-container ul li button {
+  cursor: pointer;
+  color: inherit;
+  border: none;
+  background: none;
+  padding: 6px;
+  margin: 4px;
+  font-size: 18px;
+  outline: none;
+}
+
+.daylist-container ul li .select-day {
+  border-radius: 10px;
+  background-color: #53d667;
+}
+/*# sourceMappingURL=daylist.css.map */
