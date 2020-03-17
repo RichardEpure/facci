@@ -20,6 +20,7 @@ class WeatherCards extends React.Component {
         }
     }
 
+    // Fetches forecast details from API and stores it in component state.
     updateStats()
     {
         getForecast()

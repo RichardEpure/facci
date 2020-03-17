@@ -13,6 +13,7 @@ class Location extends React.Component
         }
     }
 
+    // Fetches location from api and stores it in component state.
     updateLocation()
     {
         getLocation()

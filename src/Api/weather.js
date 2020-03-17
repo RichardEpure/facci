@@ -1,5 +1,6 @@
 import { getCoords } from "./geo";
 
+// Fetches current weather details for the current time and day.
 export async function getWeather() {
     const coords = await getCoords();
 
@@ -22,6 +23,7 @@ export async function getWeather() {
     return resp;
 }
 
+// Fetches forecast details.
 export async function getForecast() {
     const coords = await getCoords();
 

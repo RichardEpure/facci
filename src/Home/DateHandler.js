@@ -1,11 +1,13 @@
 let initDate = new Date();
 
+// Forecast API can only forecast up to 21:00, therefore any hour past this will require the application to increment the date to the next day.
 if(initDate.getHours() >= 21)
 {
     initDate = new Date(initDate);
     initDate.setDate(initDate.getDate()+1);
 }
 
+// Handles various date operations that are used across several components.
 class DateHandler {
     static days = {
         0: "Sun",

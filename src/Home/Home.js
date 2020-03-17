@@ -5,11 +5,9 @@ import Wind from "./Wind";
 import Temperature from './Temperature';
 import DayList from "./DayList";
 
-class Home extends React.Component{
-  componentDidMount() {
-   
-  }
+// Functions as a container for all homepage related components.
 
+class Home extends React.Component{
   render(){
     return(
       <div className="Home">

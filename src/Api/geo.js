@@ -1,3 +1,4 @@
+// Fetches the user's latitude and longitude coordinates.
 export async function getCoords() {
     return new Promise((resolve, reject) => {
         if(navigator.geolocation) {
@@ -15,6 +16,7 @@ export async function getCoords() {
     })
 }
 
+// Fetches the user's geographical location.
 export async function getLocation() {
     const coords = await getCoords();
 

@@ -18,6 +18,7 @@ class HourList extends React.Component {
         }
     }
 
+    // Fetches forecast details from API and stores it in component state.
     componentDidMount()
     {
         this._isMounted = true;
@@ -48,6 +49,7 @@ class HourList extends React.Component {
         this._isMounted = false;
     }
 
+    // Displays user selected hour to show forecast details for. Also displays adjacent hours that are in 3 hour intervals that the user can traverse.
     displayHours()
     {
         let elements = [];

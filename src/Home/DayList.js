@@ -17,6 +17,7 @@ class DayList extends React.Component {
         }
     }
 
+    // Displays all days that can be forecasted and keeps track of which day the user has selected.
     updateList(selectDay)
     {
         let elements = []
@@ -52,6 +53,7 @@ class DayList extends React.Component {
         }
     }
 
+    // Fetches forecast details from API and uses detail to store how many days can be forecasted. Then call functions that require this data.
     componentDidMount()
     {
         this._isMounted = true;
