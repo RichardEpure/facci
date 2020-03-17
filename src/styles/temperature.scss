@@ -4,16 +4,16 @@
     top: 125px;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
+    color: rgb(112, 112, 112);
 
     h1
     {
         font-size: 30px;
         line-height: 2rem;
-        color: rgb(112, 112, 112);
         font-weight: normal;
-        text-align: center;
         padding: 0;
-        margin: 0;
+        margin: 0 0 25px 0;
     
         span
         {
@@ -22,5 +22,12 @@
             position: relative;
             top: 10px;
         }
+    }
+
+    h2, h3
+    {
+        line-height: 5px;
+        font-weight: normal;
+        font-size: 19px;
     }
 }

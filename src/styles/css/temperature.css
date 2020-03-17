@@ -4,16 +4,16 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  text-align: center;
+  color: #707070;
 }
 
 .temperature-container h1 {
   font-size: 30px;
   line-height: 2rem;
-  color: #707070;
   font-weight: normal;
-  text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 0 0 25px 0;
 }
 
 .temperature-container h1 span {
@@ -21,5 +21,11 @@
   font-size: 48px;
   position: relative;
   top: 10px;
+}
+
+.temperature-container h2, .temperature-container h3 {
+  line-height: 5px;
+  font-weight: normal;
+  font-size: 19px;
 }
 /*# sourceMappingURL=temperature.css.map */
