@@ -1,12 +1,3 @@
-let initDate = new Date();
-
-// Forecast API can only forecast up to 21:00, therefore any hour past this will require the application to increment the date to the next day.
-if(initDate.getHours() >= 21)
-{
-    initDate = new Date(initDate);
-    initDate.setDate(initDate.getDate()+1);
-}
-
 // Handles various date operations that are used across several components.
 class DateHandler {
     static days = {
@@ -19,13 +10,13 @@ class DateHandler {
         6: "Sat",
     }
     static numDays;
-
-    static date = initDate;
-
+    
+    static date = new Date();
+    
     static getDateList(numberOfDates) {
         let list = [this.date]
         let nextDate = new Date(this.date);
-
+        
         for(let i=0; i<numberOfDates; i++)
         {
             nextDate = new Date(nextDate);
@@ -34,6 +25,20 @@ class DateHandler {
         }
         return list;
     }
+}
+
+// Forecast API can only forecast up to 21:00, therefore any hour past this will require the application to increment the date to the next day.
+const waitTime = 21-DateHandler.date.getHours()
+console.log(waitTime);
+if(waitTime >= 0)
+{
+    setTimeout(() => {
+      DateHandler.date.setDate(DateHandler.date.getDate()+1);  
+    }, waitTime*60*60*1000);
+}
+else
+{
+    DateHandler.date.setDate(DateHandler.date.getDate()+1);
 }
 
 export default DateHandler;
