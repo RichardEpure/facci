@@ -28,17 +28,21 @@ class DateHandler {
 }
 
 // Forecast API can only forecast up to 21:00, therefore any hour past this will require the application to increment the date to the next day.
-const waitTime = 21-DateHandler.date.getHours()
-console.log(waitTime);
-if(waitTime >= 0)
+function updateDate()
 {
-    setTimeout(() => {
-      DateHandler.date.setDate(DateHandler.date.getDate()+1);  
-    }, waitTime*60*60*1000);
+    const waitTime = 21-DateHandler.date.getHours()
+    if(waitTime >= 0)
+    {
+        setTimeout(() => {
+          DateHandler.date.setDate(DateHandler.date.getDate()+1);  
+          updateDate();
+        }, waitTime*60*60*1000);
+    }
+    else
+    {
+        DateHandler.date.setDate(DateHandler.date.getDate()+1);
+    }
 }
-else
-{
-    DateHandler.date.setDate(DateHandler.date.getDate()+1);
-}
+updateDate();
 
 export default DateHandler;
