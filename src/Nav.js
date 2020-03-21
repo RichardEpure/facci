@@ -2,63 +2,47 @@ import React from "react";
 import Home from "./Home/Home";
 import "./styles/css/nav.css";
 import { Home as HomeIcon, Calendar as CalendarIcon, Package as GardenIcon } from "react-feather";
+import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 
-const pages = {
-    "home": <Home></Home>,
-    "calendar": <span>calendar</span>,
-    "garden": <span>garden</span>,
-}
-const iconSize = 30;
-const icons = {
-    "home": <HomeIcon size={iconSize}></HomeIcon>,
-    "calendar": <CalendarIcon size={iconSize}></CalendarIcon>,
-    "garden": <GardenIcon size={iconSize}></GardenIcon>
-}
+const ICON_SIZE = 30;
+
+const routes = [
+    {
+        path: "/",
+        icon: <HomeIcon size={ICON_SIZE}></HomeIcon>
+    },
+    {
+        path: "/calendar",
+        icon: <CalendarIcon size={ICON_SIZE}></CalendarIcon>
+    },
+    {
+        path: "/garden",
+        icon: <GardenIcon size={ICON_SIZE}></GardenIcon>
+    }
+]
+
 
 class Nav extends React.Component {
-
-    constructor(props)
-    {
-        super(props);
-        this.state = {
-            selectPage: "home",
-        }
-    }
-
-    displayPageSelection()
-    {
-        let elements = []
-        let key = 0;
-        for(let page in pages)
-        {
-            const onClickHandler = () => {
-                this.setState(() => {
-                    return {
-                        selectPage: page
-                    }
-                });
-            };
-
-            elements.push(
-                <li key={key} onClick={onClickHandler}>{icons[page]}</li>
-            );
-            key++;
-        }
-        return elements;
-    }
-
     render() {
         return(
-            <div>
-                <div className="page-container">
-                    {pages[this.state.selectPage]}
-                </div>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/calendar" component={React.Fragment} />
+                    <Route path="/garden" component={React.Fragment} />
+                </Switch>
                 <div className="nav">
                     <ul>
-                        {this.displayPageSelection()}
+                        {routes.map(route => (
+                        <li key={route.path}>
+                            <Link to={route.path}>
+                                {route.icon}
+                            </Link>
+                        </li>
+                        ))}
                     </ul>
                 </div>
-            </div>
+            </BrowserRouter>
         );
     }
 }

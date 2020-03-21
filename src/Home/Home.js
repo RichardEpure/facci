@@ -10,7 +10,7 @@ import DayList from "./DayList";
 class Home extends React.Component{
   render(){
     return(
-      <div className="Home">
+      <div className="page-container Home">
         <div className="simple-data-container">
           <Location></Location>
           <Wind></Wind>
