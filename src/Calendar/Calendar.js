@@ -51,10 +51,6 @@ const daysInMonths = [
 
 ]
 
-// const maxDaysInMonth = getMaxDaysInMonth();
-
-
-
 class Calendar extends Component {
     constructor(props){
         super(props)
@@ -64,19 +60,6 @@ class Calendar extends Component {
             year: today.getFullYear(),
             date: today,
             maxDaysInMonth : this.getMaxDaysInMonth()
-        }
-    }
-
-    //returns the name of the month, calculated from the number format given by JS 'Date' object
-    getMonthName(){
-        for (let i = 0; i < monthNames.length; i++){
-            if (this.state.monthNumber === i){
-                this.setState((state, props) => {
-                    return {
-                        monthName: monthNames[i]
-                    };
-                });
-            }
         }
     }
 
@@ -90,37 +73,27 @@ class Calendar extends Component {
 
     }
 
-    //Shows the previous Month
+    //Changes to the previous Month
     goBack = () => {
-        console.log("I was called when the month set was "  + this.state.monthName)
-
         this.setState(state => ({
             monthNumber: state.monthNumber - 1,
             monthName: monthNames[state.monthNumber - 1],
             maxDaysInMonth : daysInMonths[state.monthNumber - 1]
         }));
-
-        // console.log("changed monthNumber " + this.state.monthNumber)
     }
 
-    //Shows the next month
+    //Changes to the next month
     goForward = () => {
-
-        console.log("I was called when the month set was "  + this.state.monthName)
-
         this.setState(state => ({
             monthNumber: state.monthNumber + 1,
             monthName: monthNames[state.monthNumber + 1],
             maxDaysInMonth : daysInMonths[state.monthNumber + 1]
         }));
-
-        // console.log("changed monthNumber " + this.state.monthNumber)
     }
 
 
 
     render() {
-        // console.log("Current MonthNumber is " + this.state.monthNumber)
         return (
             <div className="calendarContainer">
                 <div className="monthHeader">

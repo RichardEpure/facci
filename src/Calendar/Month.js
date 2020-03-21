@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import WeekDay from './WeekDay'
+import Day from './Day'
 const weekDays = [
     "Sunday",
     "Monday",
@@ -26,8 +26,6 @@ class Month extends Component {
         this.state = {
             rows : this.getRows()
         }
-        console.log(this.state.rows)
-        // console.log(new Date(this.props.year, this.props.monthNumber, 1).getDay())
     }
 
     getRows = () => {
@@ -70,25 +68,9 @@ class Month extends Component {
     }
 
     //Shows the day view when clicking a day
-    addNotes = () => {
-
-        console.log("I was clicked!")
-        // alert("clicked")
-
-
-        // this.setState(state => ({
-        //     monthNumber: this.state.monthNumber + 1,
-        //     monthName: this.getMonthName(),
-        //     maxDaysInMonth : this.getMaxDaysInMonth()
-        // }));
-
-        // console.log("changed monthNumber " + this.state.monthNumber)
-    }
-
 
 
     render() {
-        console.log(this.props)
         return (
             <div className="weekDayContainer">
 
@@ -106,17 +88,16 @@ class Month extends Component {
                     </thead>
                     <tbody>
                     {this.getRows().map((days, rowIndex) => (
-                      <tr key={rowIndex}>
-                          {days.map(day => ( // TODO: come up with a key for the component
-                            <td
-                                style = {{cursor: "pointer"}}
-                                key = {key++}
-                                onClick={this.addNotes}
-                                label= {key}>
-                                    {day.date}
-                            </td>
-                          ))}
-                      </tr>
+                        <tr key={rowIndex}>
+                            {days.map(day => ( // TODO: come up with a key for the component
+                                <Day
+                                    month={this.props.monthNumber}
+                                    year={this.props.year}
+                                    key={key++}
+                                    date={day.date}
+                                />
+                            ))}
+                        </tr>
                     ))}
                     </tbody>
                 </table>
