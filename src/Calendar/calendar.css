@@ -1,0 +1,40 @@
+.calendarContainer{
+    max-width: 550px;
+    margin-top: 20vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    border: 5px solid green;
+}
+
+.monthHeader{
+    display: flex;
+    padding: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.prevMonth{
+    cursor: pointer;
+    font-size: 25pt;
+    float: left;
+    padding-right: 20px;
+}
+
+.nextMonth{
+    cursor: pointer;
+    font-size: 25pt;
+    float: left;
+    padding-left: 20px;
+}
+
+.month{
+    font-size: 25pt;
+    text-align: center; 
+    /* flex-grow: 1; */
+    float: lfet;
+}
+
+.weekDays{
+    display: flex;
+    padding: 20px;
+}
