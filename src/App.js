@@ -3,11 +3,6 @@ import './styles/css/app.css';
 import Nav from "./Nav";
 
 class App extends React.Component{
-
-	componentDidMount() {
-
-	}
-
 	render() {
 		return(
 			<div className="App">
