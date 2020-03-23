@@ -1,18 +1,17 @@
 .calendarContainer{
-    
+    max-width: 550px;
     margin-top: 20vh;
-    margin-left: 15vw;
+    margin-left: 20vw;
     margin-right: 20vw;
-    /* border: 5px solid green; */
+    border: 5px solid green;
 }
 
 .monthHeader{
     display: flex;
     padding: 20px;
-    margin-left: 10%;
+    margin-left: 30%;
     margin-right: 30%;
 }
-
 
 .prevMonth{
     cursor: pointer;
