@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Month from './Month';
-import './calendar.css'
+import '../styles/css/calendar.css'
 
 const monthNames = [
     "January",
