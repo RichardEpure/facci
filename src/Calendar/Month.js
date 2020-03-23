@@ -81,7 +81,7 @@ class Month extends Component {
                             <td
                                 key={weekDay}
                                 label={weekDay}>
-                                    {weekDay}&nbsp;&nbsp;&nbsp;
+                                    {weekDay.substring(0, 2)}
                             </td>
                           ))}
                         </tr>
