@@ -81,7 +81,7 @@ class Month extends Component {
                             <td
                                 key={weekDay}
                                 label={weekDay}>
-                                    {weekDay}&nbsp;&nbsp;&nbsp;
+                                    {weekDay.substring(0, 2)}&nbsp;&nbsp;&nbsp;
                             </td>
                           ))}
                         </tr>
@@ -89,7 +89,7 @@ class Month extends Component {
                     <tbody>
                     {this.getRows().map((days, rowIndex) => (
                         <tr key={rowIndex}>
-                            {days.map(day => ( // TODO: come up with a key for the component
+                            {days.map(day => ( 
                                 <Day
                                     month={this.props.monthNumber}
                                     year={this.props.year}
