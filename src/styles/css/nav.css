@@ -28,6 +28,14 @@
   color: #3f3f3f;
 }
 
+.nav ul li a {
+  color: #333333;
+}
+
+.nav ul li a:hover {
+  color: #128a00;
+}
+
 .nav ul li:hover {
   color: #278f27;
 }
