@@ -5,6 +5,7 @@ import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 import Home from "./Home/Home";
 import Calendar from "./Calendar/Calendar";
 import Todos from "./Todos/Todos";
+import Garden from "./Garden/Garden";
 import "./styles/css/nav.css";
 
 const ICON_SIZE = 30;
@@ -33,7 +34,7 @@ class Nav extends React.Component {
                     <Route exact path="/" component={Home} />
                     <Route path="/calendar" component={Calendar} />
                     <Route path="/todos/:year/:month/:date" component={Todos} />
-                    <Route path="/garden" component={React.Fragment} />
+                    <Route path="/garden" component={Garden} />
                 </Switch>
                 <div className="nav">
                     <ul>
