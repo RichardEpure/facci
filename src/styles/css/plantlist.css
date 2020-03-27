@@ -1,0 +1,21 @@
+.plant-list-container {
+  color: #494949;
+  text-align: center;
+}
+
+.plant-list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 70px auto;
+  width: 100%;
+  min-width: 300px;
+}
+
+.plant-list-container ul li {
+  text-align: left;
+}
+
+.plant-list-container ul li h2 {
+  font-size: 20px;
+}
+/*# sourceMappingURL=plantlist.css.map */

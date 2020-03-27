@@ -6,7 +6,9 @@ class Graden extends React.Component
     render()
     {
         return(
-            <PlantList></PlantList>
+            <div className="garden-container">
+                <PlantList></PlantList>
+            </div>
         );
     }
 }
