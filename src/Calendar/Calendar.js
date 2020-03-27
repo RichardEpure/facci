@@ -37,7 +37,7 @@ const today = new Date()
 
 const daysInMonths = [
     31,
-    new Date(today.getFullYear, 2, 0).getDate(), //feb
+    new Date(today.getFullYear(), 2, 0).getDate(), //because feb is dynamic
     31,
     30,
     31,
