@@ -63,6 +63,7 @@ class Month extends Component {
                 date++
             }
             rows.push(days)
+            console.log(this.props.maxDaysInMonth)
         }
         return rows
     }
@@ -80,7 +81,8 @@ class Month extends Component {
                           {weekDays.map(weekDay => (
                             <td
                                 key={weekDay}
-                                label={weekDay}>
+                                label={weekDay}
+                                className="weekDay">
                                     {weekDay.substring(0, 2)}
                             </td>
                           ))}
