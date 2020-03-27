@@ -16,6 +16,33 @@
 }
 
 .plant-list-container ul li h2 {
-  font-size: 20px;
+  font-size: 18px;
+  width: 80%;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.plant-list-container ul li .arrow {
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.plant-list-container ul li .arrow:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.plant-list-container ul .active-item .arrow {
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.plant-list-container ul .active-item .arrow:hover {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 /*# sourceMappingURL=plantlist.css.map */

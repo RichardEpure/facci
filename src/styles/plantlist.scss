@@ -16,7 +16,37 @@
 
             h2
             {
-                font-size: 20px;
+                font-size: 18px;
+                width: 80%;
+                display: inline-block;
+                margin-left: 10px;
+            }
+
+            .arrow
+            {
+                cursor: pointer;
+                display: inline-block;
+                transition: 0.5s;
+
+                &:hover
+                {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .active-item
+        {
+            .arrow
+            {
+                cursor: pointer;
+                display: inline-block;
+                transition: 0.5s;
+
+                &:hover
+                {
+                    transform: rotate(-90deg);
+                }
             }
         }
     } 

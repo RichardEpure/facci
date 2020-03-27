@@ -1,5 +1,6 @@
 import React from "react";
 import { plants, getPlants } from "../Api/plant";
+import { ArrowRightCircle as Arrow } from "react-feather";
 import "../styles/css/plantlist.css";
 
 class PlantList extends React.Component
@@ -8,7 +9,8 @@ class PlantList extends React.Component
     {
         super(props);
         this.state = {
-            plants: plants
+            plants: plants,
+            elements: []
         }
     }
 
@@ -16,13 +18,19 @@ class PlantList extends React.Component
     {
         if(this.state.plants.length === 0)
         {
-            this.setState({ plants: await getPlants() })
+            let plants = await getPlants();
+            this.setState({ 
+                plants: plants,
+                elements: plants.map(plant => (
+                    <li key={plant.id}>
+                        <h2>{plant.name}</h2>
+                        <div className="arrow">
+                            <Arrow size={30}></Arrow>
+                        </div>
+                    </li>
+                ))
+            })
         }
-    }
-
-    componentDidUpdate()
-    {
-        console.log(this.state.plants);
     }
     
     render()
@@ -30,14 +38,7 @@ class PlantList extends React.Component
         return(
             <div className="plant-list-container">
                 <ul>
-                    {
-                    this.state.plants.map(plant => 
-                    (
-                        <li key={plant.id}>
-                            <h2>{plant.name}</h2>
-                        </li>
-                    ))
-                    }
+                    {this.state.elements.map(element => element)}
                 </ul>
             </div>
         );
