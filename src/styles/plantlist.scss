@@ -40,7 +40,7 @@
                 }
             }
         }
-        
+
         .active-item
         {
             .arrow
@@ -49,6 +49,12 @@
                 display: inline-block;
                 transition: 0.5s;
                 transform: rotate(90deg);
+                color: rgb(2, 131, 21);
+            }
+
+            h2
+            {
+                color: rgb(2, 131, 21);
             }
         }
     } 

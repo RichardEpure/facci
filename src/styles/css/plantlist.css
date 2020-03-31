@@ -47,5 +47,10 @@
   transition: 0.5s;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+  color: #028315;
+}
+
+.plant-list-container ul .active-item h2 {
+  color: #028315;
 }
 /*# sourceMappingURL=plantlist.css.map */

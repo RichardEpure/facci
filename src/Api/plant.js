@@ -36,5 +36,5 @@ export async function getPlant(link)
                 }
             })
         .catch(error => console.error(error));
-    return response
+    return response;
 }
