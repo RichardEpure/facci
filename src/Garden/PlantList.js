@@ -5,6 +5,8 @@ import "../styles/css/plantlist.css";
 
 class PlantList extends React.Component
 {
+    _arrowSize = 30;
+
     constructor(props)
     {
         super(props);
@@ -21,16 +23,27 @@ class PlantList extends React.Component
             let plants = await getPlants();
             this.setState({ 
                 plants: plants,
-                elements: plants.map(plant => (
-                    <li key={plant.id}>
-                        <h2>{plant.name}</h2>
-                        <div className="arrow">
-                            <Arrow size={30}></Arrow>
-                        </div>
-                    </li>
-                ))
-            })
+                elements: this.updateList(plants)
+            });
         }
+        else
+        {
+            this.setState({ 
+                elements: this.updateList(this.state.plants)
+            });
+        }
+    }
+
+    updateList(plants)
+    {
+        return plants.map(plant => (
+            <li key={plant.id}>
+                <h2>{plant.name}</h2>
+                <div className="arrow">
+                    <Arrow size={this._arrowSize}></Arrow>
+                </div>
+            </li>
+        ));
     }
     
     render()
