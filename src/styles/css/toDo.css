@@ -1,0 +1,32 @@
+.toDoContainer {
+  background-color: #009127;
+  padding: 50px;
+  margin-top: 20vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  border-radius: 10px;
+}
+
+.dateToday {
+  font-size: 5vh;
+  font-weight: bolder;
+  color: #ebebeb;
+}
+
+textarea {
+  border-radius: 10px;
+  margin-top: 2vh;
+  resize: none;
+  width: 100%;
+  height: 20vh;
+  font-size: 2.5vh;
+  background-color: #ececec;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.randomFact {
+  margin-top: 2vh;
+  color: #dcdcdc;
+  font-size: 2vh;
+}
+/*# sourceMappingURL=toDo.css.map */
