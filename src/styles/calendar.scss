@@ -1,60 +1,73 @@
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    border-spacing: 0;
+    border-collapse: unset;
+}
+
+
 .calendarContainer{
-    width: 30vw;
+    width: 50%;
     padding-top: 15vh;
-    margin-left: 35vw;
-    margin-right: 35vw;
-    // border: 5px solid red;
+    margin: 0 auto;
+    // background-color: red;
 }
 
 .monthHeader{
     display: flex;
     padding-bottom: 5vh;
-    margin-left: 35%;
-    // margin-right: 30%;
+    flex-grow: 1;
+    font-size: 5vh;
 }
 
 .prevMonth{
     cursor: pointer;
-    font-size: 25pt;
-    position: absolute;
-    margin-left: -160px;
-    color: black;
-    
 }
 
 .nextMonth{
+    clear: both;
     cursor: pointer;
-    font-size: 25pt;
-    position: absolute;
-    margin-left: 340px;
-    color: black;
-    
 }
 
 .month{
-    font-size: 35pt;
     text-align: center; 
-    /* flex-grow: 1; */
-    float: lfet;
+    flex-grow: 1;
 }
 
-.weekDayContainer{
-    margin-right: 80vw;
-    
+table{
+    width: 100%;
 }
-.weekDay{
-    color: black;
-    font-size: 15pt;
-    padding-left: 40px;
-    padding-bottom: 20px;
+
+
+.weekDayHeading{
+    // border: 5px solid green;
+    font-size: 2vh;
     font-weight: 700;
+    margin-bottom: -2vh;
+}
+
+tbody{
+    tr{
+        height: 10vh;
+        
+    }
+}
+td{
+    margin-left: 2%;
+    width: 14.28%; 
+    vertical-align: middle;
+    text-align: center;
 }
 
 .date{
-    padding-left: 20px;
-    padding-bottom: 30px;
-    text-align: center;
-    
+    margin: 0 auto;
+    width: 50%;
+
     a[href$="/null"] {
         background-color: none;
         pointer-events: none;
@@ -62,16 +75,109 @@
 
     a{
         display: block;
+        padding: 20px;
         text-decoration: none;
         color: black;
-        padding: 20px;
-        transition: 0.3s;
-        border-radius: 20%;
+        transition: 0.2s;
+        border-radius: 8px;
        
     
         &:hover{
             background-color: green;
             color: white;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
+    .calendarContainer{
+        width: 80%;
+        padding-top: 12.5vh;
+        margin: 0 auto;
+        // background-color: red;
+    }
+    
+    .monthHeader{
+        font-size: 4vh;
+    }
+
+    .weekDayHeading{
+        font-size: 1.5vh;
+    }
+
+    .date{
+        font-size: 1.25vh;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .calendarContainer{
+        width: 80%;
+        padding-top: 12.5vh;
+        margin: 0 auto;
+        // background-color: red;
+    }
+    
+    .monthHeader{
+        font-size: 4vh;
+    }
+
+    .weekDayHeading{
+        font-size: 1.5vh;
+    }
+
+    .date{
+        font-size: 1.25vh;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .calendarContainer{
+        width: 95%;
+        padding-top: 12.5vh;
+        margin: 0 auto;
+        // background-color: red;
+    }
+    
+    .monthHeader{
+        font-size: 4vh;
+    }
+
+    .weekDayHeading{
+        font-size: 1.25vh;
+    }
+
+    
+    .date{
+        font-size: 1.15vh;
+
+        margin: 0 auto;
+        width: 50%;
+    
+        a[href$="/null"] {
+            background-color: none;
+            pointer-events: none;
+        }
+    
+        a{
+            display: block;
+            padding: 10px;
+            padding-right: 20px;
+            text-decoration: none;
+            color: black;
+            transition: 0.2s;
+            border-radius: 8px;
+           
+        
+            &:hover{
+                background-color: green;
+                color: white;
+            }
         }
     }
 }
