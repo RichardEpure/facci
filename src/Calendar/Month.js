@@ -63,7 +63,6 @@ class Month extends Component {
                 date++
             }
             rows.push(days)
-            console.log(this.props.maxDaysInMonth)
         }
         return rows
     }
