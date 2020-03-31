@@ -1,5 +1,6 @@
 import React from "react";
 import PlantList from "./PlantList";
+import "../styles/css/garden.css";
 
 class Graden extends React.Component
 {
