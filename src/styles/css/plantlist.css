@@ -19,13 +19,13 @@
 
 .plant-list-container ul li {
   text-align: left;
+  margin-left: 10px;
 }
 
 .plant-list-container ul li h2 {
   font-size: 18px;
-  width: 85%;
+  width: 89%;
   display: inline-block;
-  margin-left: 10px;
 }
 
 .plant-list-container ul li .arrow {
@@ -45,10 +45,7 @@
   display: inline-block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.plant-list-container ul .active-item .arrow:hover {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 /*# sourceMappingURL=plantlist.css.map */

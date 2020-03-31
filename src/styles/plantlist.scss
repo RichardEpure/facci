@@ -19,13 +19,13 @@
         li 
         {
             text-align: left;
+            margin-left: 10px;
 
             h2
             {
                 font-size: 18px;
-                width: 85%;
+                width: 89%;
                 display: inline-block;
-                margin-left: 10px;
             }
 
             .arrow
@@ -40,7 +40,7 @@
                 }
             }
         }
-
+        
         .active-item
         {
             .arrow
@@ -48,11 +48,7 @@
                 cursor: pointer;
                 display: inline-block;
                 transition: 0.5s;
-
-                &:hover
-                {
-                    transform: rotate(-90deg);
-                }
+                transform: rotate(90deg);
             }
         }
     } 

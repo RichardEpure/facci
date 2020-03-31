@@ -14,7 +14,7 @@ class PlantList extends React.Component
             plants: plants,
             elements: [],
             updateElements: false,
-            selectPlant: { id: null }
+            selectPlant: { id: null, data: null }
         }
     }
 
@@ -47,26 +47,44 @@ class PlantList extends React.Component
     async expandItem(plant)
     {
         let plantData = await getPlant(plant.link);
-    
-        console.log({plant: plant, plantData: plantData});
 
         this.setState({
             updateElements: true,
-            selectPlant: plant,
+            selectPlant: { id: plant.id, data: plantData },
         });
     }
 
     updateElements()
     {
         let elements = this.state.plants.map(plant => {
-                return(
-                    <li key={plant.id}>
-                        <h2>{plant.name}</h2>
-                        <div className="arrow" onClick={() => this.expandItem(plant)}>
-                            <Arrow size={this._arrowSize}></Arrow>
-                        </div>
-                    </li>
-                );
+                if(this.state.selectPlant.id === plant.id)
+                {
+                    const selectPlant = this.state.selectPlant.data;
+                    return( // Returns expanded list item markup
+                        <li key={plant.id} className="active-item">
+                            <h2>{plant.name}</h2>
+                            <div className="arrow" onClick={() => this.expandItem(plant)}>
+                                <Arrow size={this._arrowSize}></Arrow>
+                            </div>
+                            <div className="body">
+                                <p>Division: {selectPlant.division ? selectPlant.division : `Unknown`}</p>
+                                <p>Family: {selectPlant.family ? selectPlant.family : `Unknown`}</p>
+                                <p>Genus: {selectPlant.genus ? selectPlant.genus : `Unknown`}</p>
+                            </div>
+                        </li>
+                    );
+                }
+                else
+                {
+                    return( // Returns collapsed list item markup
+                        <li key={plant.id}>
+                            <h2>{plant.name}</h2>
+                            <div className="arrow" onClick={() => this.expandItem(plant)}>
+                                <Arrow size={this._arrowSize}></Arrow>
+                            </div>
+                        </li>
+                    );
+                }
             }
         );
 

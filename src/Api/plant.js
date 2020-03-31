@@ -14,7 +14,6 @@ export async function getPlants()
                             name: plant.common_name ? plant.common_name : plant.scientific_name,
                             link: plant.link,
                             id: plant.id,
-                            complete_data: plant.complete_data
                         };
                     });
                 return response
@@ -28,6 +27,14 @@ export async function getPlant(link)
 {
     const response = await fetch(`https://cors-anywhere.herokuapp.com/${link}${token}`)
         .then(data => data.json())
+        .then(data => 
+            {
+                return {
+                    division: data.division ? data.division.name : null,
+                    family: data.family ? data.family.common_name : null,
+                    genus: data.genus ? data.genus.name : null
+                }
+            })
         .catch(error => console.error(error));
     return response
 }
