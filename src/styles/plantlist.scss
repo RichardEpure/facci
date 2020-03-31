@@ -19,13 +19,13 @@
         li 
         {
             text-align: left;
+            margin-left: 10px;
 
             h2
             {
                 font-size: 18px;
-                width: 85%;
+                width: 89%;
                 display: inline-block;
-                margin-left: 10px;
             }
 
             .arrow
@@ -48,11 +48,13 @@
                 cursor: pointer;
                 display: inline-block;
                 transition: 0.5s;
+                transform: rotate(90deg);
+                color: rgb(2, 131, 21);
+            }
 
-                &:hover
-                {
-                    transform: rotate(-90deg);
-                }
+            h2
+            {
+                color: rgb(2, 131, 21);
             }
         }
     } 
