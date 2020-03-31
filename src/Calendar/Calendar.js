@@ -107,19 +107,19 @@ class Calendar extends Component {
         return (
             <div className="calendarContainer">
                 <div className="monthHeader">
-                    <span
-                        className="prevMonth"
-                        onClick={this.goBack}
-                    >
-                        &#8249;
-                    </span>
+                    <div
+                            className="prevMonth"
+                            onClick={this.goBack}
+                        >
+                            &#8249;
+                    </div>
                     <div className="month"> {this.state.monthName} </div>
-                    <span
-                        className="nextMonth"
-                        onClick={this.goForward}
-                    >
-                        &#8250;
-                    </span>
+                    <div
+                            className="nextMonth"
+                            onClick={this.goForward}
+                        >
+                            &#8250;
+                    </div>
                 </div>
                 <Month
                     year ={this.state.year}

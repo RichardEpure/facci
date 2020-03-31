@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../styles/css/calendar.css'
 import Day from './Day'
 const weekDays = [
     "Sunday",
@@ -72,25 +72,22 @@ class Month extends Component {
 
     render() {
         return (
-            <div className="weekDayContainer">
-
-                <table className = "weekDayHeader">
-                    <thead>
-                        <tr>
-                          {weekDays.map(weekDay => (
-                            <td
-                                key={weekDay}
-                                label={weekDay}
-                                className="weekDay">
-                                    {weekDay.substring(0, 2)}
-                            </td>
-                          ))}
-                        </tr>
-                    </thead>
-                    <tbody>
+                <table>
+                    <tr className="weekDayHeading">
+                        {weekDays.map(weekDay => (
+                        <th
+                            scope="col"
+                            key={weekDay}
+                            label={weekDay}
+                            className="weekDay">
+                                {weekDay.substring(0, 3)}
+                        </th>
+                        ))}
+                    </tr>
+                    <tbody className="dateContainer"> {/* possibly  remvoe this */}
                     {this.getRows().map((days, rowIndex) => (
-                        <tr key={rowIndex}>
-                            {days.map(day => ( // TODO: come up with a key for the component
+                        <tr key={rowIndex} className="weekRow">
+                            {days.map(day => ( 
                                 <Day
                                     month={this.props.monthNumber}
                                     year={this.props.year}
@@ -101,8 +98,7 @@ class Month extends Component {
                         </tr>
                     ))}
                     </tbody>
-                </table>
-            </div>
+                </table>   
         );
     }
 }

@@ -12,11 +12,14 @@ class Day extends Component {
                   key = {this.props.key}
                   onClick={this.addNotes}
                   label= {this.props.key}
-                  className="date"
+                  
                 >
-                  <Link to={`/todos/${this.props.year}/${this.props.month}/${this.props.date}`} as="td">
-                      {this.props.date}
-                  </Link>
+                    <div className="date">
+                        <Link to={`/todos/${this.props.year}/${this.props.month}/${this.props.date}`} as="td">
+                        {this.props.date}
+                        </Link>
+                    </div>
+                  
               </td>
         );
     }
