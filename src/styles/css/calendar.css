@@ -99,44 +99,10 @@ td {
     font-size: 4vh;
   }
   .weekDayHeading {
-    font-size: 1.5vh;
+    font-size: 2vh;
   }
   .date {
-    font-size: 1.25vh;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .calendarContainer {
-    width: 80%;
-    padding-top: 12.5vh;
-    margin: 0 auto;
-  }
-  .monthHeader {
-    font-size: 4vh;
-  }
-  .weekDayHeading {
-    font-size: 1.5vh;
-  }
-  .date {
-    font-size: 1.25vh;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .calendarContainer {
-    width: 80%;
-    padding-top: 12.5vh;
-    margin: 0 auto;
-  }
-  .monthHeader {
-    font-size: 4vh;
-  }
-  .weekDayHeading {
-    font-size: 1.5vh;
-  }
-  .date {
-    font-size: 1.25vh;
+    font-size: 2vh;
   }
 }
 
@@ -150,10 +116,10 @@ td {
     font-size: 4vh;
   }
   .weekDayHeading {
-    font-size: 1.25vh;
+    font-size: 2vh;
   }
   .date {
-    font-size: 1.15vh;
+    font-size: 2vh;
     margin: 0 auto;
     width: 50%;
   }
