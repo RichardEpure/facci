@@ -8,13 +8,13 @@ class Day extends Component {
 
     render() {
         return (
-              <td
-                  style = {{cursor: "pointer"}}
-                  key = {this.props.key}
-                  onClick={this.addNotes}
-                  label= {this.props.key}
+                <td
+                    style = {{cursor: "pointer"}}
+                    key = {this.props.key}
+                    onClick={this.addNotes}
+                    label= {this.props.key}
                 >
-                    <div className="date">
+                    <div className={localStorage.getItem(`${this.props.date}/${this.props.month}/${this.props.year}`) ? "date-highlight" : "date"}>
                         <Link to={`/todos/${this.props.year}/${this.props.month}/${this.props.date}`} as="td">
                             {this.props.date}
                         </Link>

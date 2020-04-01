@@ -88,6 +88,21 @@ td{
     }
 }
 
+.date-highlight{
+    margin: 0 auto;
+    width: 50%;
+    background-color: #22ab4b;
+    color: white;
+    border-radius: 8px;
+    a{
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        color: white;
+        border-radius: 8px;
+    }
+}
+
 
 @media only screen and (max-width: 850px) {
     .calendarContainer{
@@ -108,6 +123,22 @@ td{
     .date{
         font-size: 2vh;
     }
+
+    .date-highlight{
+        margin: 0 auto;
+        width: 50%;
+        background-color: #22ab4b;
+        color: white;
+        border-radius: 8px;
+        a{
+            display: block;
+            padding: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
+        }
+    }
 }
 
 
@@ -117,7 +148,6 @@ td{
         width: 95%;
         padding-top: 12.5vh;
         margin: 0 auto;
-        // background-color: red;
     }
     
     .monthHeader{
@@ -131,7 +161,6 @@ td{
     
     .date{
         font-size: 2vh;
-
         margin: 0 auto;
         width: 50%;
     
@@ -154,6 +183,22 @@ td{
                 background-color: green;
                 color: white;
             }
+        }
+    }
+
+    .date-highlight{
+        margin: 0 auto;
+        width: 50%;
+        background-color: #22ab4b;
+        color: white;
+        border-radius: 8px;
+        a{
+            display: block;
+            padding: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
         }
     }
 }

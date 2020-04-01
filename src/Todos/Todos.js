@@ -71,8 +71,7 @@ export default class Todos extends Component {
                             event => {
                                 this.setState({ notes: event.target.value })
                                 localStorage.setItem(`${date}/${month}/${year}`, event.target.value)
-                            }
-                        }
+                            }}
                         value={this.state.notes}
                     />
                 </div>
