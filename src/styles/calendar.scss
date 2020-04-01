@@ -88,6 +88,10 @@ td{
     }
 }
 
+.date-highlight{
+    color: red;
+}
+
 
 @media only screen and (max-width: 850px) {
     .calendarContainer{
@@ -131,7 +135,6 @@ td{
     
     .date{
         font-size: 2vh;
-
         margin: 0 auto;
         width: 50%;
     
