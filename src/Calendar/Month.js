@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import '../styles/css/calendar.css'
 import Day from './Day'
 const weekDays = [
@@ -15,13 +16,7 @@ const weekDays = [
 var key = 0
 
 class Month extends Component {
-
-
     constructor(props){
-        function counter(){
-            key++;
-            return key;
-        }
         super(props)
         this.state = {
             rows : this.getRows()
@@ -68,23 +63,23 @@ class Month extends Component {
     }
 
     //Shows the day view when clicking a day
-
-
     render() {
         return (
                 <table>
-                    <tr className="weekDayHeading">
-                        {weekDays.map(weekDay => (
-                        <th
-                            scope="col"
-                            key={weekDay}
-                            label={weekDay}
-                            className="weekDay">
-                                {weekDay.substring(0, 3)}
-                        </th>
-                        ))}
-                    </tr>
-                    <tbody className="dateContainer"> {/* possibly  remvoe this */}
+                    <thead>
+                        <tr className="weekDayHeading">
+                            {weekDays.map(weekDay => (
+                            <th
+                                scope="col"
+                                key={weekDay}
+                                label={weekDay}
+                                className="weekDay">
+                                    {weekDay.substring(0, 3)}
+                            </th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody className="dateContainer">
                     {this.getRows().map((days, rowIndex) => (
                         <tr key={rowIndex} className="weekRow">
                             {days.map(day => ( 

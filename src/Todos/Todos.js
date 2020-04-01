@@ -29,7 +29,7 @@ const randomFacts = [
     "Gardening can be considered both an art (arranging plants harmoniously) and as a science (applying the principles and techniques of cultivation).",
     "In ancient Greek mythology, Hyakinthos (a.k.a. Hyacinthus) was the god of spring flowers. The god Apollo adored Hyakinthos, but killed him by mistake. The hyacinth flower sprang up from his blood and, thus, this flower is a symbol of sorrow, sadness, and resurrection.",
     'Gardens and philosophy are often seen as related. Philosophers note the contribution of gardening to the “good life.”',
-    "There is a garden in England called The Poison Garden. It is home to 100 murderous plants. Visitors to this dangerous garden are prohibited from smelling, touching, or tasting any of the plants.[",
+    "There is a garden in England called The Poison Garden. It is home to 100 murderous plants. Visitors to this dangerous garden are prohibited from smelling, touching, or tasting any of the plants.",
     "The Hanging Gardens of Babylon were one of the Seven Wonders of the Ancient World. They are believed to have been built by the Neo-Babylonian king Nebuchadnezzar II near present day Hillah, Babil province, in Iraq",
     "An herb is from the leaf of a plant. A spice is from the seed, bark, root, berry, or bulb.",
     "A pineapple is actually a berry.",
