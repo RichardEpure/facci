@@ -1,0 +1,44 @@
+.page-container {
+    margin-bottom: 75px;
+}
+
+.nav {
+    $navheight: 60px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: $navheight;
+        display: block;
+        position: fixed;
+        bottom: 0;
+        background: rgb(194, 233, 205);
+        text-align: center;
+
+        li {
+            cursor: pointer;
+            position: relative;
+            top: $navheight/2;
+            transform: translateY(-50%);
+            display: inline-block;
+            width: 20%;
+            max-width: 100px;
+            padding: 15px 0 15px 0;
+            color: rgb(63, 63, 63);
+
+            a{
+                color: #333333;
+
+                &:hover {
+                    color: #128a00;
+                }
+            }
+
+            &:hover {
+                color: rgb(39, 143, 39);
+            }
+        }
+    }
+}

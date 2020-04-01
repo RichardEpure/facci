@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
 
-export default function Day({fullDate}){
-    if (fullDate == null) {
-        return <div className="emptyDay"/>
+import { Link } from 'react-router-dom';
+
+class Day extends Component {
+    addNotes = () => {
     }
 
-    const date = fullDate.getDate();
-    const className = "day";
-
-        return ( 
-            <button className ={className}> {date} </button> 
-
+    render() {
+        return (
+                <td
+                    style = {{cursor: "pointer"}}
+                    key = {this.props.key}
+                    onClick={this.addNotes}
+                    label= {this.props.key}
+                >
+                    <div className={this.props.hasContent ? "date-highlight" : "date"}>
+                        <Link to={`/todos/${this.props.year}/${this.props.month}/${this.props.date}`} as="td">
+                            {this.props.date}
+                        </Link>
+                    </div>
+                  
+              </td>
         );
+    }
 }
 
- 
+export default Day;

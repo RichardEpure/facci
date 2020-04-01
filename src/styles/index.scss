@@ -5,9 +5,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom, 
+    #f1f1f1,
+    rgb(194, 214, 200),
+    rgb(108, 161, 119)
+    );
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+// Home
+.simple-data-container {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 680px;
+  min-height: 200px;
+  height: 20vh;
+  margin-bottom: 60px;
 }

@@ -1,0 +1,23 @@
+.location-container {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+
+.location-container h1, .location-container h2 {
+  color: #707070;
+  font-weight: normal;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.location-container h1 {
+  font-size: 20px;
+  line-height: 2rem;
+}
+
+.location-container h2 {
+  font-size: 14px;
+}
+/*# sourceMappingURL=location.css.map */

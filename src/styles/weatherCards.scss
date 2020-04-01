@@ -1,0 +1,45 @@
+.weather-cards-container {
+    ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        list-style: none;
+        text-align: center;
+
+        li {
+            text-align: left;
+            font-size: 14px;
+            display: block;
+            margin: 15px auto 15px auto;
+            padding: 20px;
+            width: 80%;
+            min-width: 250px;
+            max-width: 500px;
+            box-shadow: inset 6px 6px 5px -4px rgba(0,0,0,0.37);
+            background-color: rgb(182, 239, 198);
+            border-radius: 10px;
+            position: relative;
+
+            p {
+                margin: 0 0 0 35px;
+                padding: 0;
+                display: inline-block;
+            }
+
+            span {
+                position: absolute;
+                right: 20px;
+                bottom: 50%;
+                transform: translateY(50%);
+            }
+
+            i {
+                margin-right: 5px;
+                position: absolute;
+                left: 20px;
+                bottom: 50%;
+                transform: translateY(50%);
+            }
+        }
+    }
+}

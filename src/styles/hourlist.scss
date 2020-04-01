@@ -1,0 +1,27 @@
+.hourlist-container {
+    text-align: center;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .select-hour {
+            font-size: 22px;
+        }
+
+        li {
+            cursor: pointer;
+            user-select: none;
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+        }
+
+        i {
+            position: relative;
+            top: 4px;
+            color: rgb(80, 80, 80);
+        }
+    }
+}

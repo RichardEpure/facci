@@ -12,6 +12,7 @@ class Wind extends React.Component
         }
     }
 
+    // Fetches current weather details from api and stores wind speed in component state.
     updateSpeed()
     {
         getWeather()

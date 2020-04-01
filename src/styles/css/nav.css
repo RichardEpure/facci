@@ -1,0 +1,42 @@
+.page-container {
+  margin-bottom: 75px;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  background: #c2e9cd;
+  text-align: center;
+}
+
+.nav ul li {
+  cursor: pointer;
+  position: relative;
+  top: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+  width: 20%;
+  max-width: 100px;
+  padding: 15px 0 15px 0;
+  color: #3f3f3f;
+}
+
+.nav ul li a {
+  color: #333333;
+}
+
+.nav ul li a:hover {
+  color: #128a00;
+}
+
+.nav ul li:hover {
+  color: #278f27;
+}
+/*# sourceMappingURL=nav.css.map */

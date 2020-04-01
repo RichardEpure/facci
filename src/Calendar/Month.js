@@ -1,123 +1,101 @@
 import React, { Component } from 'react';
-import Weekday from './Weekday';
-import Day from './Day';
 
-const weekdays = [
+import '../styles/css/calendar.css'
+import Day from './Day'
+const weekDays = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
-    "Sunday"
-];
+    "Saturday"
+
+]
+
+var key = 0
 
 class Month extends Component {
-    constructor(props)
-    {
-        super(props);
-        this.renderWeek = this.renderWeek.bind(this); 
+    constructor(props){
+        super(props)
         this.state = {
-            month: ""
+            rows : this.getRows()
         }
     }
 
-    updateMonth(x){
-        var x = new Date();
-        this.setState((state, props) => {
-            return {
-                month: x.getMonth()
-            };
-        });  
+    getRows = () => {
+        const rows = []
+        const startDayIndex =  new Date(this.props.year, this.props.monthNumber, 1).getDay()
+        const numberOfRows = (startDayIndex < 5) ? 5 : 6
+        let date = 1
+        for (let rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+            const days = []
+            const lastDayIndex = new Date(this.props.year, this.props.monthNumber, this.props.maxDaysInMonth).getDay()
+
+            for (let dayIndex = 0; dayIndex < 7; dayIndex++) {
+
+                if (rowIndex === 0 && dayIndex < startDayIndex) {
+                    days.push({
+                        date: null,
+                        name: null
+                    })
+                } else if (rowIndex === 5 && dayIndex > lastDayIndex) {
+                    days.push({
+                        date: null,
+                        name: null
+                    })
+                } else if (date > this.props.maxDaysInMonth + startDayIndex) {
+                    days.push({
+                        date: null,
+                        name: null
+                    })
+                } else {
+                    days.push({
+                        date: date - startDayIndex,
+                        name: weekDays[dayIndex]
+                    })
+                }
+                date++
+            }
+            rows.push(days)
+        }
+        return rows
     }
 
-    componentDidMount()
-    {
-        this.updateMonth();
-    }
-
-
-    render() { 
-        const weekdaysMarkup = weekdays.map(weekday =>{
-            return (
-                <Weekday
-                    key = {weekday}
-                    title = {abbreviateWeekday(weekday)}
-                    label = {weekday}
-                />
-            )
-        });
-
-        const weeks = getWeeksForMonth(2, 2020);
-        console.log(weeks)
-
-        const weeksMarkup = weeks.map((week, index) => {
-            return(
-                <div role="row" className="week" key={index}> 
-                {week.map(this.renderWeek)}
-                </div>
-            )
-        });
-
-        return ( 
-            <div> 
-                <h1>{this.state.month}</h1>
-                <div className="weekdayContainer"> {weekdaysMarkup}</div>
-                {weeksMarkup}
-             </div>
+    //Shows the day view when clicking a day
+    render() {
+        return (
+                <table>
+                    <thead>
+                        <tr className="weekDayHeading">
+                            {weekDays.map(weekDay => (
+                            <th
+                                scope="col"
+                                key={weekDay}
+                                label={weekDay}
+                                className="weekDay">
+                                    {weekDay.substring(0, 3)}
+                            </th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody className="dateContainer">
+                    {this.getRows().map((days, rowIndex) => (
+                        <tr key={rowIndex} className="weekRow">
+                            {days.map(day => ( 
+                                <Day
+                                    month={this.props.monthNumber}
+                                    year={this.props.year}
+                                    key={key++}
+                                    date={day.date}
+                                />
+                            ))}
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>   
         );
     }
-
-    renderWeek(fullDate, index){
-        if (fullDate == null) {
-            return <Day key={index} />
-        }
-        const date = fullDate.getDate();
-        return (
-            <Day
-            key = {index}
-            fullDate = {fullDate}
-            />
-        )
-    }
 }
 
-function abbreviateWeekday(weekday){
-    return weekday.substring(0,3)
-}
-
-const WEEK_LENGTH = 7;
-
-function getWeeksForMonth(month,year){
-    const firstOfMonth = new Date(year, month, 1);
-    const firstDayofWeek = firstOfMonth.getDay();
-    const weeks = [[]];
-
-    console.log("first day of week " + firstOfMonth.getDay());
-
-    let currentWeek = weeks[0]
-    let currentDate = firstOfMonth;
-
-    for (let i = 0; i < firstDayofWeek; i ++){
-        currentWeek.push(null)
-    }
-
-    while (currentDate.getMonth() === month){
-        if (currentWeek.length === WEEK_LENGTH){
-            currentWeek = [];
-            weeks.push(currentWeek);
-        }
-
-        currentWeek.push(currentDate);
-        currentDate = new Date(year, month, currentDate.getDate() +1);
-    }
-
-    while (currentWeek.length < 7){
-        currentWeek.push(null)
-    }
-
-    return weeks;
-}
-
- 
 export default Month;
