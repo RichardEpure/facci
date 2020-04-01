@@ -90,7 +90,19 @@ td {
 }
 
 .date-highlight {
-  color: red;
+  margin: 0 auto;
+  width: 50%;
+  background-color: #22ab4b;
+  color: white;
+  border-radius: 8px;
+}
+
+.date-highlight a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
 }
 
 @media only screen and (max-width: 850px) {
@@ -107,6 +119,21 @@ td {
   }
   .date {
     font-size: 2vh;
+  }
+  .date-highlight {
+    margin: 0 auto;
+    width: 50%;
+    background-color: #22ab4b;
+    color: white;
+    border-radius: 8px;
+  }
+  .date-highlight a {
+    display: block;
+    padding: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
   }
 }
 
@@ -144,6 +171,21 @@ td {
   .date a:hover {
     background-color: green;
     color: white;
+  }
+  .date-highlight {
+    margin: 0 auto;
+    width: 50%;
+    background-color: #22ab4b;
+    color: white;
+    border-radius: 8px;
+  }
+  .date-highlight a {
+    display: block;
+    padding: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
   }
 }
 /*# sourceMappingURL=calendar.css.map */
