@@ -18,21 +18,6 @@ const monthNames = [
     "December"
 ]
 
-
-
-const weekDays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-
-]
-
-
-
 const today = new Date()
 
 const daysInMonths = [
@@ -75,7 +60,7 @@ class Calendar extends Component {
 
     //Changes to the previous Month
     goBack = () => {
-        if(!this.state.monthNumber == 0){
+        if(!this.state.monthNumber === 0){
             this.setState(state => ({
                 monthNumber: state.monthNumber - 1,
                 monthName: monthNames[state.monthNumber - 1],
@@ -88,7 +73,7 @@ class Calendar extends Component {
 
     //Changes to the next month
     goForward = () => {
-        if(this.state.monthNumber == 11){
+        if(this.state.monthNumber === 11){
            
         }
         else{
@@ -100,8 +85,6 @@ class Calendar extends Component {
         }
         
     }
-
-
 
     render() {
         return (

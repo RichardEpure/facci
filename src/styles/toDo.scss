@@ -1,11 +1,12 @@
 .toDoContainer{
     background-color: #009127;
     padding: 50px;
-    margin-top: 20vh;
-    // margin: 0 auto;
-    margin-left: 20vw;
-    margin-right: 20vw;
     border-radius: 10px;
+    width: 70%;
+    position: fixed;
+    margin-top: 20vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 
@@ -33,29 +34,30 @@ textarea{
     font-size: 1.5vh;
 }
 
+
 @media only screen and (max-width: 800px) {
     .toDoContainer{
-        background-color: #009127;
-        padding: 50px;
-        margin-top: 20vh;
-        // margin: 0 auto;
-        margin-left: 10vw;
-        margin-right: 10vw;
-        border-radius: 10px;
+        margin-left: 5vw;
+        margin-right: 7vw;
     }
     
 }
 
 
+
 @media only screen and (max-width: 400px) {
     .toDoContainer{
-        background-color: #009127;
-        padding: 50px;
-        margin-top: 15vh;
-        // margin: 0 auto;
-        margin-left: 2.5vw;
-        margin-right: 2.5vw;
-        border-radius: 10px;
+       margin-left: 7vw;
+       margin-right: 7vw;
+       padding: 30px;
+    }
+    
+}
+
+@media only screen and (max-width: 350px) {
+    .toDoContainer{
+        padding: 30px;
+        margin-left: 5vw;
     }
     
 }

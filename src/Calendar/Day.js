@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { Link } from 'react-router-dom';
 
 class Day extends Component {
@@ -12,11 +13,10 @@ class Day extends Component {
                   key = {this.props.key}
                   onClick={this.addNotes}
                   label= {this.props.key}
-                  
                 >
                     <div className="date">
                         <Link to={`/todos/${this.props.year}/${this.props.month}/${this.props.date}`} as="td">
-                        {this.props.date}
+                            {this.props.date}
                         </Link>
                     </div>
                   
