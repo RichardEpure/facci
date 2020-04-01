@@ -60,30 +60,24 @@ class Calendar extends Component {
 
     //Changes to the previous Month
     goBack = () => {
-        if(!this.state.monthNumber === 0){
+        if(this.state.monthNumber > 0){
             this.setState(state => ({
                 monthNumber: state.monthNumber - 1,
                 monthName: monthNames[state.monthNumber - 1],
                 maxDaysInMonth : daysInMonths[state.monthNumber - 1]
             }));
-        }
-        
-        
-    }
-
-    //Changes to the next month
-    goForward = () => {
-        if(this.state.monthNumber === 11){
            
         }
-        else{
+    }
+    //Changes to the next month
+    goForward = () => {
+        if(this.state.monthNumber < 11){  
             this.setState(state => ({
                 monthNumber: state.monthNumber + 1,
                 monthName: monthNames[state.monthNumber + 1],
                 maxDaysInMonth : daysInMonths[state.monthNumber + 1]
             }));
         }
-        
     }
 
     render() {
