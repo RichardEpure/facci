@@ -13,6 +13,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 .calendarContainer{
     width: 50%;
+    max-width: 700px;
     padding-top: 15vh;
     margin: 0 auto;
 }
@@ -21,7 +22,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     display: flex;
     padding-bottom: 5vh;
     flex-grow: 1;
-    font-size: 5vh;
+    font-size: 38px;
 }
 
 .prevMonth{
@@ -45,7 +46,7 @@ table{
 
 .weekDayHeading{
     // border: 5px solid green;
-    font-size: 2vh;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: -2vh;
 }
@@ -74,7 +75,7 @@ td{
 
     a{
         display: block;
-        padding: 20px;
+        padding: 25% 0 25% 0;
         text-decoration: none;
         color: black;
         transition: 0.2s;
@@ -96,7 +97,7 @@ td{
     border-radius: 8px;
     a{
         display: block;
-        padding: 20px;
+        padding: 25% 0 25% 0;
         text-decoration: none;
         color: white;
         border-radius: 8px;
@@ -111,34 +112,6 @@ td{
         margin: 0 auto;
         // background-color: red;
     }
-    
-    .monthHeader{
-        font-size: 4vh;
-    }
-
-    .weekDayHeading{
-        font-size: 2vh;
-    }
-
-    .date{
-        font-size: 2vh;
-    }
-
-    .date-highlight{
-        margin: 0 auto;
-        width: 50%;
-        background-color: #22ab4b;
-        color: white;
-        border-radius: 8px;
-        a{
-            display: block;
-            padding: 10px;
-            padding-right: 10px;
-            text-decoration: none;
-            color: white;
-            border-radius: 8px;
-        }
-    }
 }
 
 
@@ -148,57 +121,5 @@ td{
         width: 95%;
         padding-top: 12.5vh;
         margin: 0 auto;
-    }
-    
-    .monthHeader{
-        font-size: 4vh;
-    }
-
-    .weekDayHeading{
-        font-size: 2vh;
-    }
-
-    
-    .date{
-        font-size: 2vh;
-        margin: 0 auto;
-        width: 50%;
-    
-        a[href$="/null"] {
-            background-color: none;
-            pointer-events: none;
-        }
-    
-        a{
-            display: block;
-            padding: 10px;
-            padding-right: 20px;
-            text-decoration: none;
-            color: black;
-            transition: 0.2s;
-            border-radius: 8px;
-           
-        
-            &:hover{
-                background-color: green;
-                color: white;
-            }
-        }
-    }
-
-    .date-highlight{
-        margin: 0 auto;
-        width: 50%;
-        background-color: #22ab4b;
-        color: white;
-        border-radius: 8px;
-        a{
-            display: block;
-            padding: 10px;
-            padding-right: 10px;
-            text-decoration: none;
-            color: white;
-            border-radius: 8px;
-        }
     }
 }
