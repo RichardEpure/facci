@@ -14,7 +14,7 @@ class Day extends Component {
                     onClick={this.addNotes}
                     label= {this.props.key}
                 >
-                    <div className={this.props.hasContent ? "date-highlight" : "date"}>
+                    <div className={localStorage.getItem(`${this.props.date}/${this.props.month}/${this.props.year}`) ? "date-highlight" : "date"}>
                         <Link to={`/todos/${this.props.year}/${this.props.month}/${this.props.date}`} as="td">
                             {this.props.date}
                         </Link>
