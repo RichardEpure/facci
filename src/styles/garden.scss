@@ -1,4 +1,12 @@
 .garden-container
 {
     overflow: hidden;
+    text-align: center;
+    height: 100vh;
+
+    h1
+    {
+        color: rgb(73, 73, 73);
+        margin: 10px 0 10px;
+    }
 }

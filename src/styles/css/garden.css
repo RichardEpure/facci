@@ -1,4 +1,11 @@
 .garden-container {
   overflow: hidden;
+  text-align: center;
+  height: 100vh;
+}
+
+.garden-container h1 {
+  color: #494949;
+  margin: 10px 0 10px;
 }
 /*# sourceMappingURL=garden.css.map */
