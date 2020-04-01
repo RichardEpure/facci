@@ -47,20 +47,21 @@ function getRandomInt(max) {
 }
 
 export default class Todos extends Component {
-  constructor(props) {
-      super(props);
-      const { match: { params: { date, month, year } } } = props;
-      this.state = {
-        notes: window.localStorage.getItem(`${date}/${month}/${year}`) || ''       
-      }
+    constructor(props) {
+        super(props);
+        const { match: { params: { date, month, year } } } = props;
+        this.state = {
+            notes: window.localStorage.getItem(`${date}/${month}/${year}`) || '',
+            randomFact: randomFacts[getRandomInt(23)]
+        }
      
-  }
+    }
 
-      render() {
-          const { match: { params: { date, month, year } } } = this.props;
+    render() {
+        const { match: { params: { date, month, year } } } = this.props;
         
-          return(
-              <div className="toDoContainer">   
+        return(
+            <div className="toDoContainer">   
                 <div className="dateToday">
                    {"To Do:"} {date} {monthNames[month]} {year}
                 </div>
@@ -68,18 +69,17 @@ export default class Todos extends Component {
                     <textarea
                         onChange={
                             event => {
-                              this.setState({ notes: event.target.value })
-                              localStorage.setItem(`${date}/${month}/${year}`, event.target.value)
+                                this.setState({ notes: event.target.value })
+                                localStorage.setItem(`${date}/${month}/${year}`, event.target.value)
                             }
                         }
-                      value={this.state.notes}
+                        value={this.state.notes}
                     />
                 </div>
                 <div className="randomFact">
-                    { <strong>  Did you know? </strong>} {randomFacts[getRandomInt(23)]}
+                    {<strong>  Did you know? </strong>} {this.state.randomFact}
                 </div>
             </div>
-              
-          )
-      }
+            )
+    }
 }
