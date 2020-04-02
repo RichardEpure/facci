@@ -23,6 +23,7 @@ class Month extends Component {
         }
     }
 
+    //Logic for number of weeks in a given month according to start day and end day
     getRows = () => {
         const rows = []
         const startDayIndex =  new Date(this.props.year, this.props.monthNumber, 1).getDay()
@@ -62,7 +63,6 @@ class Month extends Component {
         return rows
     }
 
-    //Shows the day view when clicking a day
     render() {
         return (
                 <table>

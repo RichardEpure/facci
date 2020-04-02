@@ -57,6 +57,7 @@ export default class Todos extends Component {
      
     }
 
+    //renders the to-do area for users to add notes to and generates random gardening facts
     render() {
         const { match: { params: { date, month, year } } } = this.props;
         
