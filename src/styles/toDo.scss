@@ -11,7 +11,7 @@
 
 
 .dateToday{
-    font-size: 5vh;
+    font-size: 42px;
     font-weight: bolder;
     color: #ebebeb;
 }
@@ -22,7 +22,7 @@ textarea{
     resize: none;
     width: 100%;
     height: 20vh;
-    font-size: 2vh;
+    font-size: 18px;
     background-color: #ececec;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     // font-weight: bold;
@@ -31,7 +31,7 @@ textarea{
 .randomFact{
     margin-top: 2vh;
     color: #dcdcdc;
-    font-size: 1.5vh;
+    font-size: 16px;
 }
 
 
@@ -50,6 +50,10 @@ textarea{
        margin-left: 7vw;
        margin-right: 7vw;
        padding: 30px;
+    }
+
+    .dateToday{
+        font-size: 28px;
     }
     
 }
