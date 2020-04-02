@@ -1,11 +1,11 @@
-const token = '?token=aklPenJkNFlJQWR1ZGNZL2pmNGpzUT09';
-export var plants = [];
+const token = '?token=aklPenJkNFlJQWR1ZGNZL2pmNGpzUT09'; // API token.
+export var plants = []; // Cache plant list data so a fetch on the API only needs to be done once.
 
+// Fetches general data on a large quanity of plants from the API.
 export async function getPlants()
 {
-    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://trefle.io/api/plants${token}&page_size=100`)
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://trefle.io/api/plants${token}&page_size=100`) // "cors-anywhere" proxy used to avoid cors error without implementing a server. However, causes latency.
         .then(data => data.json())
-        //.then(data =>  data.filter(plant => plant.complete_data === true))
         .then(data =>
             {
                 const response = data.map(plant => 
@@ -23,6 +23,7 @@ export async function getPlants()
     return response;
 }
 
+// Fetches specific data on a single plant from the API.
 export async function getPlant(link)
 {
     const response = await fetch(`https://cors-anywhere.herokuapp.com/${link}${token}`)

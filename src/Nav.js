@@ -10,6 +10,7 @@ import "./styles/css/nav.css";
 
 const ICON_SIZE = 30;
 
+// Store the path for each page and the corresponding icon to render.
 const routes = [
     {
         path: "/",

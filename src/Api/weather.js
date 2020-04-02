@@ -62,5 +62,3 @@ export async function getForecast() {
 
     return resp;
 }
-
-getForecast();

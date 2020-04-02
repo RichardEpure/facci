@@ -18,6 +18,7 @@ class PlantList extends React.Component
         }
     }
 
+    // Fetch plant list data if it isn't cached.
     async componentDidMount()
     {
         if(this.state.plants.length === 0)
@@ -36,6 +37,7 @@ class PlantList extends React.Component
         }
     }
 
+    // If data has been updated, then also update elements to be rendered.
     componentDidUpdate()
     {
         if(this.state.updateElements)
@@ -44,6 +46,7 @@ class PlantList extends React.Component
         }
     }
 
+    // If a plant item in the list has been click, fetch data related to the given plant and expand the list item.
     async expandItem(plant)
     {
         let plantData = await getPlant(plant.link);
@@ -54,6 +57,7 @@ class PlantList extends React.Component
         });
     }
 
+    // Compiles the fetched plant data with HTML so that it can be rendered into the list.
     updateElements()
     {
         let elements = this.state.plants.map(plant => {
