@@ -87,6 +87,7 @@ class Month extends Component {
                                     month={this.props.monthNumber}
                                     year={this.props.year}
                                     key={key++}
+                                    propKey={key++}
                                     date={day.date}
                                 />
                             ))}
