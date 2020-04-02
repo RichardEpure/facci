@@ -6,6 +6,7 @@ class Day extends Component {
     addNotes = () => {
     }
 
+    //allows the user to add notes to days
     render() {
         return (
                 <td
@@ -15,11 +16,10 @@ class Day extends Component {
                     label= {this.props.key}
                 >
                     <div className={localStorage.getItem(`${this.props.date}/${this.props.month}/${this.props.year}`) ? "date-highlight" : "date"}>
-                        <Link to={`/todos/${this.props.year}/${this.props.month}/${this.props.date}`} as="td">
+                        <Link to={`/todos/${this.props.year}/${this.props.month}/${this.props.date}`} as="td"> 
                             {this.props.date}
                         </Link>
                     </div>
-                  
               </td>
         );
     }

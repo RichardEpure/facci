@@ -1,3 +1,4 @@
+//resetting basic styles
 table, caption, tbody, tfoot, thead, tr, th, td {
     margin: 0;
     padding: 0;
@@ -9,7 +10,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     border-spacing: 0;
     border-collapse: unset;
 }
-
 
 .calendarContainer{
     width: 50%;
@@ -45,7 +45,6 @@ table{
 
 
 .weekDayHeading{
-    // border: 5px solid green;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: -2vh;
@@ -68,6 +67,7 @@ td{
     margin: 0 auto;
     width: 50%;
 
+    //styling for days that don't exist in the month
     a[href$="/null"] {
         background-color: none;
         pointer-events: none;
@@ -89,6 +89,7 @@ td{
     }
 }
 
+//styling for days that have styling
 .date-highlight{
     margin: 0 auto;
     width: 50%;
@@ -104,18 +105,16 @@ td{
     }
 }
 
-
+//responsiveness for medium sized screens
 @media only screen and (max-width: 850px) {
     .calendarContainer{
         width: 80%;
         padding-top: 12.5vh;
         margin: 0 auto;
-        // background-color: red;
     }
 }
 
-
-
+//responsiveness for smaller sized screens
 @media only screen and (max-width: 500px) {
     .calendarContainer{
         width: 95%;
