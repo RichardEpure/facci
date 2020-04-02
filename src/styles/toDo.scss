@@ -3,10 +3,10 @@
     padding: 50px;
     border-radius: 10px;
     width: 70%;
-    position: fixed;
-    margin-top: 20vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    position: absolute;
+    left: 50%;
+    top: 15vh;
+    transform: translateX(-50%);
 }
 
 
@@ -21,7 +21,7 @@ textarea{
     margin-top: 2vh;
     resize: none;
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     font-size: 18px;
     background-color: #ececec;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -36,9 +36,8 @@ textarea{
 
 
 @media only screen and (max-width: 800px) {
-    .toDoContainer{
-        margin-left: 5vw;
-        margin-right: 7vw;
+    .dateToday{
+        font-size: 30px;
     }
     
 }
@@ -47,21 +46,11 @@ textarea{
 
 @media only screen and (max-width: 400px) {
     .toDoContainer{
-       margin-left: 7vw;
-       margin-right: 7vw;
        padding: 30px;
     }
 
     .dateToday{
-        font-size: 28px;
-    }
-    
-}
-
-@media only screen and (max-width: 350px) {
-    .toDoContainer{
-        padding: 30px;
-        margin-left: 5vw;
+        font-size: 25px;
     }
     
 }
